@@ -1,12 +1,19 @@
-<template>
-<h1 class="site-headline">Text Generator</h1>
+<template lang="pug">
+  SiteHeadline(text="True") True text
 </template>
 
 <script>
+import SiteHeadline from "./../../../components/typography/SiteHeadline.vue";
+
+export default {
+  components: {
+    SiteHeadline,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-.site-headline {
-  font-size: 99px;
+.site-generator {
+  // 
 }
 </style>

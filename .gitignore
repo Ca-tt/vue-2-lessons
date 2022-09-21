@@ -1,6 +1,8 @@
+# folders
 .DS_Store
 node_modules
 /dist
+lessons-to-transfer/
 
 
 # local env files

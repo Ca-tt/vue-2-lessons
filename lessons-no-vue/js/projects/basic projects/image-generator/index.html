@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"
+    defer></script>
+  <link rel="stylesheet" href="./../../EXPAND/CSS/expand.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="./imageGenerator.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row mb-5">
+      <h1 class="text-center">Custom Image Generator</h1>
+    </div>
+
+    <!-- поля -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-3 mb-2">
+        <label for="new-image-size" class="fz-small">Новый размер картинки</label>
+        <input id="new-image-size" type="text" class="new-image-size form-control" placeholder="50x50" value="50x50"
+          maxlength="9">
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="text-center">
+            <button class="image-generator-button btn btn-dark d-inline-block">Сгенерировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- результат -->
+    <h3 class="text-center">Ваша картинка, милорд</h3>
+
+    <!-- картинка -->
+    <div class="row justify-content-center text-center">
+      <figure class="col">
+        <div>
+          <img class="image" src="https://via.placeholder.com/50x50" alt="">
+        </div>
+        <figcaption class="image-caption fz-small">Кажется, этой картинке нужно задать иной размер...</figcaption>
+      </figure>
+    </div>
+
+    <hgroup>
+      <h2>Кажется, я выше тебя, бро</h2>
+      <h5>Думаю, так и есть, бро. Но не зазнавайся. Я умнее</h5>
+    </hgroup>
+
+    <header>
+      Тут хранится шапка сайта.
+      А ты что думал?
+    </header>
+
+    <nav>
+      <a href="#">Воин 1</a>
+      <a href="#">Воин 2</a>
+      <a href="#">Воин 3</a>
+      <a href="#">Воин 4</a>
+      <a href="#">Воин 5</a>
+    </nav>
+
+    <aside>
+      <nav>
+        <a href="#">Ссылочка 1</a>
+        <a href="#">Ссылочка 2</a>
+        <a href="#">Ссылочка 3</a>
+        <a href="#">Ссылочка 4</a>
+        <a href="#">Ссылочка 5</a>
+      </nav>
+    </aside>
+
+    <footer>
+      <p>Контакты</p>
+      <p>Соцсети</p>
+      <p>Денежку скидывать сюда</p>
+    </footer>
+
+    <ul>
+      <li>
+        <a href="#">Ссылка #1</a>
+      </li>
+      <li>
+        <a href="#">Ссылка #2</a>
+      </li>
+      <li>
+        <a href="#">Ссылка #3</a>
+      </li>
+    </ul>
+
+</body>
+
+</html>

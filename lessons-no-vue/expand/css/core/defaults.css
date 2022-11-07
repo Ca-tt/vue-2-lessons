@@ -1,0 +1,43 @@
+:root {
+  /* spacing sizes */
+  --extra-small-gap: 5px;
+  --small-gap: 10px;
+  --default-gap: 20px;
+  --medium-gap: 35px;
+  --large-gap: 50px;
+  --extra-large-gap: 75px;
+
+  /* font size */
+  --extra-small-font-size: 14px;
+  --small-font-size: 16px;
+  --default-font-size: 20px;
+  --medium-font-size: 25px;
+  --large-font-size: 35px;
+  --extra-large-font-size: 60px;
+
+  /* transition */
+  --short-transition: 0.2s;
+  --default-transition: 0.5s;
+  --medium-transition: 0.8s;
+  --long-transition: 1s;
+  --extra-long-transition: 1.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--default-font-size);
+  color: var(--default);
+}
+
+img {
+  max-width: 100%;
+}
+
+body,
+figure,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

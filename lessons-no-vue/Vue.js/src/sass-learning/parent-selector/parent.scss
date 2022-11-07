@@ -1,0 +1,11 @@
+.parent {
+  color: red;
+
+  body & {
+    color: blue;
+  }
+}
+
+.child {
+
+}

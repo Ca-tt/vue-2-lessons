@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+}
+
+.btn {
+  padding: 0.4rem !important;
+}
+
+.modal {
+  display: block !important;
+  position: static;
+}
+
+.input-quantity {
+  max-width: 50px;
+}
+
+.templates .card-image {
+  min-height: 260px;
+}
+
+.templates .card-title {
+  min-height: 45px;
+}

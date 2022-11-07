@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="../style.css")
+        title Image Generator
+    body
+        section.burger 
+            i.fa-solid.fa-burger
+
+        section.menu
+            .cross &times;
+            .toggle
+                h3.placeholder Placeholder
+                label.switch
+                    input(type="checkbox")
+                    span.slider.round
+
+                h3.random Random
+
+    section.text 
+        h1 Random image generator
+
+    section.options
+        h2 What do you want to do?
+        .option-block
+            a(href="#").option
+                .icon
+                    i.fa-solid.fa-pen
+                h3.op-title Edit image
+            a(href="#").option
+                .icon
+                    i.fa-solid.fa-images
+                h3.op-title Random image
+            a(href="#").option
+                .icon
+                    i.fa-solid.fa-circle-arrow-down
+                h3.op-title Download
+
+    section.thanks 
+        h3 Thanks for using our website
+        section.cards 
+            .card 
+                .icon-thanks
+                    i.fa-solid.fa-heart
+                    p  3.5k
+                .text-thanks 
+                    h5 Like
+                    p  Leave a like if you liked it
+            .card
+                .icon-thanks
+                    a(href="#")
+                        i.fa-solid.fa-dollar-sign
+                .text-thanks 
+                    h5 Donate
+                    p  If you have an opportunity, support our efforts
+
+    footer
+        section.about-us
+            h3 Random image generator by 
+                a(href="#") EXPAND
+            p.made-by Made by Daniil Doshyn, Damir Lukianenko
+            section.social-media
+                .media 
+                    a(href="") 
+                        i.fa-brands.fa-instagram
+                .media 
+                    a(href="") 
+                        i.fa-brands.fa-facebook
+                .media 
+                    a(href="") 
+                        i.fa-brands.fa-github
+                
+    script(src="../script.js") 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./../client-server/style.css">
+
+  <style>
+
+    /* em - для пространства (margin, padding) */
+    /* rem - для font-size */
+
+    html {
+      font-size: 15px; /* базовый размер шрифта*/
+    }
+
+    .block {
+      background-color: aqua;
+      color: white;
+      display: inline-block;
+      font-size: 2rem; /* 30px*/
+
+      padding: 1em;
+      margin: 1em;
+    }
+    
+    @media screen and (min-width: 768px){
+      html {
+        font-size: 20px;
+      }
+
+      .block {
+        max-width: 45%;
+        /* меняет шрифт не у элемента */
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="block">
+    <p>😎Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.😎</p>
+  </div>
+  <div class="block">
+    <p>😎Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.😎</p>
+  </div>
+  
+</body>
+</html>

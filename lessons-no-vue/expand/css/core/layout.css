@@ -1,0 +1,97 @@
+/* containers */
+.container,
+.container-80,
+.container-70,
+.container-60 {
+	max-width: 80%;
+	margin: 0 auto var(--medium-gap) auto;
+}
+
+.container-80 {
+	max-width: 80%;
+}
+
+.container-70 {
+	max-width: 70%;
+}
+
+.container-60 {
+	max-width: 60%;
+}
+
+/* rows */
+.row {
+	display: flex;
+	margin: var(--small-gap) 0;
+}
+
+.row-wrap,
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row-nowrap,
+.nowrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.row-between,
+.columns-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row-between-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.row-between-end {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.row-center,
+.columns-center,
+.row-vh-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* row as columns */
+
+.flex-column, 
+.row-column,
+.row-as-column {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 var(--small-gap) 0;
+}
+
+
+/* columns (items) */
+[class*="col"] {
+	padding: 0 var(--small-gap);
+}	
+
+.col-50 {
+	max-width: 50%;
+}
+
+.columns-25-75 .left-column {
+	max-width: 25%;
+}
+
+.columns-25-75 .right-column {
+	max-width: 75%;
+}
+
+/* helpers */
+.flex {
+	display: flex;
+}

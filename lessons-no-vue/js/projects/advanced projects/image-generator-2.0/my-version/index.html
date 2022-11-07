@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>Генератор картинок онлайн</title>
+
+  <!-- expand -->
+  <link rel="stylesheet" href="./../../../../expand/css/core/core.css">
+  <link rel="stylesheet" href="./../../../../expand/css/additional/additional.css">
+
+  <!-- components -->
+  <link rel="stylesheet" href="./../../../../expand/components/burgers/burger-lines/burger.css">
+  <script type="module" src="./../../../../expand/components/burgers/burger-lines/burger.js" defer></script>
+
+  <script src="./fileSaver.js" defer></script>
+
+  <!-- customization -->
+  <link rel="stylesheet" href="custom.css">
+  <script src="custom.js" defer></script>
+</head>
+
+<body>
+
+  <!-- burger button -->
+  <svg class="burger-button">
+    <line class="line top-line" x1="0" x2="50" y1="0" y2="0" />
+    <line class="line middle-line" x1="0" x2="50" y1="0" y2="0" />
+    <line class="line bottom-line" x1="0" x2="50" y1="0" y2="0" />
+  </svg>
+
+  <!-- burger slide menu -->
+  <aside class="burger-menu">
+    <nav>
+      Burger navigation links
+    </nav>
+  </aside>
+
+  <div class="container default-padding-y">
+    <!-- title -->
+    <header>
+      <h1 class="title text-center">Random Image Generator</h1>
+    </header>
+
+    <!-- image -->
+    <main class="row-between columns-25-75">
+      <nav class="inputs left-column">
+        <h3 class="subtitle">Image settings</h3>
+
+        <section class="vertical-input-section">
+          <label for="size">1. Size</label>
+
+          <section class="row-between-center">
+            <div class="col-50 vertical-input-section">
+              <label for="width">Width</label>
+              <input id="width" class="width-input" type="number">
+            </div>
+            <div class="x">
+              X
+            </div>
+            <div class="col-50 vertical-input-section">
+              <label for="height">Height</label>
+              <input id="height" class="height-input" type="number">
+            </div>
+          </section>
+        </section>
+
+        <section class="vertical-input-section">
+          <label for="size">2. Colors</label>
+          <section class="row-between">
+            <div class="vertical-input-section">
+              <label for="background">Background</label>
+              <input id="background" class="background-input" type="color">
+            </div>
+            <div class="vertical-input-section">
+              <label for="color">Text color</label>
+              <input id="color" class="color-input" type="color">
+            </div>
+          </section>
+        </section>
+
+        <section class="vertical-input-section">
+          <label for="text">3. Text</label>
+          <input id="text" class="text-input" type="text" placeholder="image text">
+        </section>
+
+        <section class="vertical-input-section">
+          <label for="extension">4. Download format</label>
+          <select name="" id="extension" class="extension-input">
+            <option value=".png">png</option>
+            <option value=".jpg">jpg</option>
+            <option value=".jpeg">jpeg</option>
+          </select>
+        </section>
+
+        <section class="vertical-input-section">
+          <a href="https://via.placeholder.com/400x300/ffff80/000080.png?text=2332" class="download-link"
+            download="">Download</a>
+        </section>
+      </nav>
+
+      <div class="image-wrapper right-column">
+        <img class="generated-image is-relative pointer"
+          src="https://via.placeholder.com/1920x1080/000/fff.jpg?text=Hover+Me" alt="Please, enter new image size">
+      </div>
+    </main>
+  </div>
+
+  <button onclick="download()">
+    Download Image
+  </button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+  </script>
+  <script>
+    function download() {
+      axios({
+        url: 'https://via.placeholder.com/1920x1080/000/fff.jpg',
+        method: 'GET',
+        responseType: 'blob',
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      })
+        .then((response) => {
+          const url = window.URL
+            .createObjectURL(new Blob([response.data]));
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', 'image.jpg');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        })
+    }
+
+  </script>
+
+
+</body>
+
+</html>

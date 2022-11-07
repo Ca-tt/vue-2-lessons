@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>Адаптивчики</title>
+
+  <link rel="stylesheet" href="./../EXPAND/CSS/expand.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .flex-container {
+      background: rgba(129, 17, 129, 0.877);
+      display: flex;
+      height: 200px;
+      color: white;
+      font-size: 25px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .flex-column {
+      background: rgb(243, 173, 44);
+      height: 150px;
+      border: 1px solid rgb(148, 47, 161);
+      text-align: center;
+      flex-basis: 300px;
+    }
+
+    .third-column {
+      flex-grow: 1;
+    }
+
+    .first-column {
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="flex-container">
+    <div class="flex-column first-column">Колонка #1 </div>
+    <div class="flex-column">Колонка #2 </div>
+    <div class="flex-column third-column">Колонка #3 </div>
+  </section>
+
+</body>
+
+</html>

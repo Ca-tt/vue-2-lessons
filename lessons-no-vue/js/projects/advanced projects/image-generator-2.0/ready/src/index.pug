@@ -1,0 +1,133 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js") 
+    //- bootstrap
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")
+    
+    link(rel="stylesheet" href="./css/style.sass")
+    link(rel="stylesheet" href="./css/custom.scss")
+
+    //- filesaver
+    script(type="module" src="./js/global.js") 
+    script(type="module" src="./js/fileSaver.js") 
+    script(type="module" src="./js/custom.js") 
+    script(type="module" src="./js/randomGenerator.js") 
+    title Image Generator
+
+  body
+    section.burger 
+      i.fa-solid.fa-burger
+
+    section.menu.px-3
+      .cross &times;
+      .toggle.mb-3
+        h3.placeholder Placeholder
+        label.switch
+          input(type="checkbox")
+          span.slider.round
+        h3.random Random
+
+      section.row.mb-3
+        h4 Size
+        .col
+          label.form-label(for="exampleFormControlInput1") Width
+          input.form-control.width-input#width(type="number" placeholder="1920" value="1920")
+        .col
+          label.form-label(for="exampleFormControlInput1") Height
+          input.form-control.height-input#height(type="number" placeholder="1080" value="1080")
+      section.row.mb-3
+        h4 Colors
+        .col
+          label.form-label(for="exampleFormControlInput1") Background
+          input.form-control.background-input#background(type="color" placeholder="#000" value="#000")
+        .col
+          label.form-label(for="exampleFormControlInput1") Text color
+          input.form-control.color-input#color(type="color" placeholder="#fff" value="#fff")
+      section.row.mb-3
+        h4 Text
+        .col
+          input.form-control.text-input#text(type="text" placeholder="type your text here" value="Damirka Full HD")
+      section.row.mb-3 
+        h4 Download format
+        .col
+          select.form-select.mb-3.extension-input#extension
+            option(value=".png") png
+            option(value=".jpg") jpg
+            option(value=".jpeg") jpeg
+          a.download-link.btn.btn-secondary(href="#" download) Download
+
+  section.text 
+    h1 Random image generator
+
+  .container
+    .content
+      .img-wrapper
+        img.content-image.generated-image(src="https://dummyimage.com/1920x1080/000/fff/.png?text=Damirka+Full+HD")
+      .content-overlay
+      .content-details.fadeIn-bottom
+        section.options
+          h2 What do you want to do?
+          .option-block
+            a(href="#").option.edit-image
+              .icon
+                i.fa-solid.fa-pen
+              h3.op-title Edit image
+            a(href="#").option.random-image.random-button
+              .icon
+                i.fa-solid.fa-images
+              h3.op-title Random image
+            a(href="#" data-bs-toggle="modal" data-bs-target="#exampleModal").option.download-image
+              .icon
+                i.fa-solid.fa-circle-arrow-down
+              h3.op-title Download
+
+  footer
+    section.about-us
+      h3 Random image generator made by 
+        a(href="#") EXPAND 
+        | team  
+      section.social-media
+        .media 
+          a(href="") 
+            i.fa-brands.fa-instagram
+        .media 
+          a(href="") 
+            i.fa-brands.fa-facebook
+        .media 
+          a(href="") 
+            i.fa-brands.fa-github
+
+  //- Modal 
+  .modal.fade#exampleModal(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+        .modal-body 
+          section.thanks 
+            h3 Thanks for using our website
+            section.cards 
+              .card 
+                .icon-thanks
+                  i.fa-solid.fa-heart
+                  p  3.5k
+                .text-thanks 
+                  h5 Like
+                  p  Leave a like if you liked it
+              .card
+                .icon-thanks
+                  a(href="#")
+                    i.fa-solid.fa-dollar-sign
+                .text-thanks 
+                  h5 Donate
+                  p  If you have an opportunity, support our efforts
+
+
+
+
+
+

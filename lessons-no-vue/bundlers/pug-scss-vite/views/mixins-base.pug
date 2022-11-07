@@ -1,0 +1,36 @@
+//- 1. syntax
+//- 2. basic usage
+//- 3. options
+//- 4. options -> attributes
+//- 5. blocks: additional content
+//- 6. multiple mixins: arrays
+
+mixin name 
+  html goes here 
+
++name
+
+mixin titles(titleText, subtitleText, titleClass) 
+  h2.title(class=titleClass)= titleText
+  h4.subtitle= subtitleText
+  if block
+    block
+  else 
+    p Тут должен был быть контент, но его нет
+
++titles('Дамир', 'Препод', 'upperCase')
+  //- h6.mini-subtitle Дополнительный контент
+
+mixin link(href, className, text)
+  a.link(href=href class=className)= text
+
++link('/', 'small', 'Ссылка')
+
+- let products = ['чайник', 'пылесос', 'утюг'];
+
+mixin card(itemText) 
+  .card 
+    p= itemText
+
+each product in products 
+  +card(product)

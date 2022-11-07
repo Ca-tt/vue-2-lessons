@@ -1,0 +1,25 @@
+- let isRain = false;
+
+//- case isRain 
+//- 	when true: div.rain I feel sad
+//- 	when false: div.happy I feel happy
+//- 	default: div.okay I feel okay
+
+- let mood = ['sad', 'happy', 'okay', 1, 3, 10];
+
+each val in mood 
+	case val
+		when 'sad': div.rain I feel sad
+		when 'happy': div.happy I feel happy
+		when 'okay': div.happy I feel okay
+		default: div.okay I feel okay
+	
+- let userExists;
+
+section 
+	if userExists 
+		h1.title Hey, User!
+	else if !userExists
+		h1.title Else if
+	else 
+		h1.title Please, log in

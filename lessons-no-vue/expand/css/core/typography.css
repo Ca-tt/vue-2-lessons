@@ -1,0 +1,32 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* typography sizes */
+.title {
+	font-size: var(--extra-large-font-size);
+	margin: 0 0 var(--medium-gap) 0;
+}
+
+.subtitle {
+	font-size: 35px;
+	margin: 0 0 var(--default-gap) 0;
+}
+
+/* custom sizes */
+.fz-big,
+.big-font {
+	font-size: 3rem;
+}
+
+.fz-small {
+	font-size: 0.8rem;
+}
+
+.fz-as-mobile {
+	font-size: 1.5rem;
+}

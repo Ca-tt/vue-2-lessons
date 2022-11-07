@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  height: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #444;
+  text-align: right;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 20px 0 20px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form div {
+  width: 25%;
+  height: 90px;
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.form div:hover {
+  background-color: #292929;
+}
+
+.form div:active {
+  background-color: #30ee00;
+}
+
+#sum {
+  width: 50%;
+  background-color: #4169e1;
+}
+
+#sum:hover {
+  background-color: #0400ff;
+}
+
+#sum:active {
+  background-color: #f00;
+}
+
+#bracket {
+  background-color: #f00;
+}
+
+#bracket:hover {
+  background-color: #910000;
+}
+
+#bracket:active {
+  background-color: #4169e1;
+}
+/*# sourceMappingURL=style.css.map */

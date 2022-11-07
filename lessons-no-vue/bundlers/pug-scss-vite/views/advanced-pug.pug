@@ -1,0 +1,65 @@
+//- ADVANCED PART
+//- 1. Объекты 
+//- 2. Объекты + массивы
+//- 3. if-else
+//- 4. циклы
+//- 5. функции
+//- 6. стили
+
+//- // function
+//- - let settingString = (value) => { return '[setting:' + value + ']'}
+
+//- // mixin (that uses the function)
+//- mixin settingLink(value)
+//-   a(href= 'tel:' + settingString(value))= settingString(value)
+
+//- // mixin call
+//- h3.title
+//-   | Call: 
+//-   +settingLink('Company Phone')
+
+
+//- complex mixins: all inclusive
+
+//- mixin form(method, action, inputs, submitLabel)
+//-   form(method=method action=action)
+//-     if inputs
+//-       each input in inputs
+//-           case input.type
+//-             when 'textarea'
+//-               label #{input.label}
+//-                 textarea(placeholder=input.placeholder required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+//-             when 'checkbox'
+//-             when 'radio'
+//-               label
+//-                 input(type=input.type name=input.name id=input.id class=input.class required=input.required)
+//-                 | #{" " + input.label}
+//-             default
+//-               label #{input.label}
+//-                 input(type=input.type min=input.min max=input.max multiple=input.multiple pattern=input.pattern step=input.step height=input.height width=input.width placeholder=input.placeholder required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+//-     input(type="submit" value=submitLabel)
+
+//- +form
+
+//- +form("post", "", [
+//-   {
+//-     label: 'Your Full Name',
+//-     name: 'name',
+//-     type: 'text',
+//-     placeholder: 'John Doe',
+//-     required: true,
+//-     autofocus: true
+//-   },
+//-   {
+//-     label: 'Your Email',
+//-     name: 'email', 
+//-     type: 'email',
+//-     placeholder: 'john@doe.com',
+//-     required: true
+//-   },
+//-   {
+//-     label: 'I agree with the Terms & Conditions',
+//-     type: 'checkbox',
+//-     required: true
+//-   }
+//- ], "Go!")

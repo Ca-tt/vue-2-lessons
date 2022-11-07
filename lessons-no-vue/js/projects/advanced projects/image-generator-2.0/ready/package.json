@@ -1,0 +1,20 @@
+{
+	"name": "dania",
+	"type": "module",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"dev": "parcel src/index.pug",
+		"build": "parcel build src/index.pug --public-url ./ --no-optimize"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-pug": "^2.6.2",
+		"@parcel/transformer-sass": "^2.6.2",
+		"parcel": "^2.6.2"
+	},
+	"dependencies": {
+		"unsplash-js": "^7.0.15"
+	}
+}

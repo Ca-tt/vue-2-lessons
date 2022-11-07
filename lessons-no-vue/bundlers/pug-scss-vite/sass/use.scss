@@ -1,0 +1,5 @@
+@use 'colors' with ($black: white);
+
+.app {
+  color: colors.$black;
+}

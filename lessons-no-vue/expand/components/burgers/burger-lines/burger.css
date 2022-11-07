@@ -1,0 +1,93 @@
+/* p.s. html code below */
+
+:root {
+	/* burger settings */
+	--burger-size: 50px;
+	--burger-position: 20px;
+	--burger-index: 2;
+	
+	/* line settings */
+	--line-width: 5px;
+	--line-color: black;
+	--hover-color: rgb(194, 131, 14);
+
+	/* relative lines position */
+	--middle-line-position: 4;
+	--bottom-line-position: 7;
+	
+	/* menu configs */
+	--menu-bg: #fff;
+	--menu-color: #000;
+	--menu-size: 400px;
+	--menu-index: 1;
+
+	/* common */
+	--transition: .4s;
+}
+
+/* button */
+.burger-button {
+	position: fixed;
+	max-width: var(--burger-size);
+	max-height: var(--burger-size);
+	top: var(--burger-position);
+	left: var(--burger-position);
+	z-index: var(--burger-index);
+	cursor: pointer;
+}
+
+/* lines */
+.line {
+	transition: var(--transition);
+	stroke: var(--line-color);
+	stroke-width: var(--line-width);
+}
+
+.top-line {
+	transform: translateY(var(--line-width));
+	opacity: 1;
+}
+
+.middle-line {
+	transform: translateY(calc(var(--line-width) * var(--middle-line-position)));
+}
+
+.bottom-line {
+	transform: translateY(calc(var(--line-width) * var(--bottom-line-position)));
+}
+
+/* hover */
+.burger-button:hover .line {
+	stroke: var(--hover-color);
+}
+
+/* active burger */
+
+.burger-button.active .top-line {
+	transform: rotate(45deg);
+}
+
+.burger-button.active .middle-line {
+	opacity: 0;
+	transform: translateY(var(--line-width));
+}
+
+.burger-button.active .bottom-line {
+	transform: translateY(calc(var(--line-width) * var(--bottom-line-position)))
+		rotate(-45deg);
+}
+
+/* burger menu */
+.burger-menu {
+	position: fixed;
+	z-index: var(--menu-index);
+	width: var(--menu-size);
+	height: 100%;
+	left: calc(var(--menu-size) * -1);
+	padding: 100px 20px;
+	transition: var(--transition);
+}
+
+.burger-menu.active {
+	left: 0;
+}

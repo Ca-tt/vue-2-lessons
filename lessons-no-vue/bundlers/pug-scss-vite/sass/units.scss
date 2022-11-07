@@ -1,0 +1,51 @@
+@use 'sass:math';
+@use 'sass:list';
+
+$base-size: calc(20px / 5);
+
+.app {
+  font-size: $base-size;
+}
+
+// color format supported
+$color: #f2ece4; // #f2ece4
+$color: #b37399aa; // rgba(179, 115, 153, 67%)
+$color: midnightblue; // #191970
+$color: rgb(204, 102, 153); // #c69
+$color: rgba(107, 113, 127, 0.8); // rgba(107, 113, 127, 0.8)
+$color: hsl(228, 7%, 86%); // #dadbdf
+$color: hsla(20, 20%, 85%, 0.7); // rgb(225, 215, 210, 0.7)
+
+// lists
+$colors: #fff, #000, rgb(15, 244, 126);
+
+$black: #333;
+
+.app {
+  color: list.nth($colors, 3);
+  height: 200px;
+  width: 200px;
+  background-color: $black;
+}
+
+$list-spaces: 10px 20px 30px;
+$list-commas: 10px, 20px, 30px;
+
+$colors: ("white": orange);
+
+.app {
+  color: map-get($colors, "white") !important;
+}
+
+$calculated-width: min(400px, 10%);
+
+.app {
+  width: $calculated-width;
+}
+// color.adjust(#6b717f, $red: 15); // #7a717f
+// color.adjust(#d2e1dd, $red: -10, $blue: 10); // #c8e1e7
+// color.adjust(#998099, $lightness: -30%, $alpha: -0.4); // rgba(71, 57, 71, 
+
+
+// .app {
+// }

@@ -1,0 +1,16 @@
+.input-group,
+.form-section,
+.input-section,
+.input-label {
+
+}
+
+.vertical-input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* each element in group */
+.vertical-input-section > * {
+  margin: 0 0 var(--small-gap) 0;
+}

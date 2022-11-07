@@ -1,0 +1,87 @@
+.container{
+  padding: 1em 0;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: .3;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  bottom: -30%;
+  left: 0;  
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  bottom: -20%;
+  opacity: 1;
+}
+
+.option {
+  h3 {
+    color: rgb(32, 26, 26);
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  &:hover h3 {
+    color: white;
+  }
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+// modal 
+.modal-dialog {
+  max-width: 80%;
+}

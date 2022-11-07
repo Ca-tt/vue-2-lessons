@@ -1,0 +1,270 @@
+style.
+  .card {
+    border: 1px solid gray;
+    display: inline-block;
+    text-align: center;
+  }
+//- //- Этап 1. Разметка
+
+//- mixin card()
+//-   figure.card
+//-     div.card-image
+//-       img(src="https://dummyimage.com/200.gif")
+
+//-     section
+//-       p.price $8
+
+//-     figcaption
+//-       p.card-text Product description
+
+//- +card()
+
+
+//- //- Этап 2. Параметры и переменные
+//- mixin card(src, price, description)
+//-   figure.card
+//-     div.card-image
+//-       img(src=src)
+
+//-     section
+//-       p.price= price
+
+//-     figcaption
+//-       p.card-text= description
+
+//- - let image = 'https://dummyimage.com/420x210.png?text=Product'
+//- - let price = '$8';
+//- - let description = 'Лучший товар на свете'
+
+//- +card(image, price, description)
+
+
+//- Этап 3. Массив и цикл
+//- -
+//-   let products = [
+//-     {
+//-       image: 'https://dummyimage.com/200.gif?text=Пулемёт+1',
+//-       title: 'Пулемёт',
+//-       price: 999.99,
+//-       description: "Убивает врагов одним выстрелом",
+//-     },
+//-     {
+//-       image: 'https://dummyimage.com/200.gif?text=Пулемёт+2',
+//-       title: 'Пулемёт 2',
+//-       price: 999.98,
+//-       description: "Убивает врагов одним с половиной выстрелом",
+//-     },
+//-     {
+//-       image: 'https://dummyimage.com/200.gif?text=Пулемёт+3',
+//-       title: 'Пулемёт 3',
+//-       price: 999.97,
+//-       description: "Убивает врагов двумя выстрелами",
+//-     }
+//-   ];
+
+//- mixin card(src, title, price, description)
+//-   figure.card
+//-     div.card-image
+//-       img(src=src)
+
+//-     section 
+//-       h3.title= title
+
+//-     section
+//-       p.price= price
+
+//-     figcaption
+//-       p.card-text= description
+
+//- each product in products 
+//-   +card(product.image, product.title, product.price, product.description)
+
+
+//- Этап 4. Старая цена и переключатель
+-
+  let products = [
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+1',
+      title: 'Пулемёт',
+      price: 999.99,
+      hasOldPrice: true,
+      oldPrice: 1999.99,
+      description: "Убивает врагов одним выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+2',
+      title: 'Пулемёт 2',
+      price: 999.98,
+      hasOldPrice: false,
+      oldPrice: 1999.98,
+      description: "Убивает врагов одним с половиной выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+3',
+      title: 'Пулемёт 3',
+      price: 999.97,
+      hasOldPrice: true,
+      oldPrice: 1999.97,
+      description: "Убивает врагов двумя выстрелами",
+    }
+  ];
+
+mixin card(src, title, price, hasOldPrice, oldPrice, description)
+  figure.card
+    div.card-image
+      img(src=src)
+
+    section 
+      h3.title= title
+
+    section
+      p.price= '$' + price
+      if hasOldPrice
+        p.oldprice: s= '$' + oldPrice
+
+    figcaption
+      p.card-text= description
+
+each product in products 
+  +card(
+    product.image, 
+    product.title, 
+    product.price, 
+    product.hasOldPrice, 
+    product.oldPrice, 
+    product.description
+  )
+
+//- Этап 5. Функция для генерации старой цены
+-
+  let products = [
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+1',
+      title: 'Пулемёт',
+      price: 999.99,
+      hasOldPrice: true,
+      oldPrice: 1999.99,
+      description: "Убивает врагов одним выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+2',
+      title: 'Пулемёт 2',
+      price: 999.98,
+      hasOldPrice: false,
+      oldPrice: 1999.98,
+      description: "Убивает врагов одним с половиной выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+3',
+      title: 'Пулемёт 3',
+      price: 999.97,
+      hasOldPrice: true,
+      oldPrice: 1999.97,
+      description: "Убивает врагов двумя выстрелами",
+    }
+  ];
+
+- let random500 = () => { return Math.floor(Math.random() * 500) };
+- let getOldPrice = (price) => { return price + random500() };
+
+
+//- mixin card(src, title, price, hasOldPrice, oldPrice, description)
+//-   figure.card
+//-     div.card-image
+//-       img(src=src)
+
+//-     section 
+//-       h3.title= title
+
+//-     section
+//-       p.price= price
+//-       if hasOldPrice
+//-         p.oldprice
+//-           s= getOldPrice(price)
+
+//-     figcaption
+//-       p.card-text= description
+
+//- each product in products 
+//-   +card(
+//-     product.image, 
+//-     product.title, 
+//-     product.price, 
+//-     product.hasOldPrice, 
+//-     product.oldPrice, 
+//-     product.description
+//-   )
+
+
+//- Этап 6. Внешний вид на основе переключателей html
+style.
+  .card {
+    border: 1px solid gray;
+  }
+  .horizontal {
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+-
+  let products = [
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+1',
+      title: 'Пулемёт',
+      price: 999.99,
+      hasOldPrice: true,
+      isHorizontal: 'true',
+      description: "Убивает врагов одним выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+2',
+      title: 'Пулемёт 2',
+      price: 999.98,
+      hasOldPrice: false,
+      isHorizontal: false,
+      description: "Убивает врагов одним с половиной выстрелом",
+    },
+    {
+      image: 'https://dummyimage.com/200.gif?text=Пулемёт+3',
+      title: 'Пулемёт 3',
+      price: 999.97,
+      hasOldPrice: true,
+      isHorizontal: true,
+      description: "Убивает врагов двумя выстрелами",
+    }
+  ];
+
+- let random500 = () => { return Math.floor(Math.random() * 500) };
+- let getOldPrice = (price) => { return price + random500() };
+
+mixin card(src, title, price, hasOldPrice, oldPrice, description, isHorizontal)
+  figure.card(class=isHorizontal ? 'horizontal': '')
+    //- image
+    div.card-image
+      img(src=src)
+    //- title
+    section 
+      h3.title= title
+    //- prices
+    section
+      p.price= price
+      if hasOldPrice
+        p.oldprice
+          s= getOldPrice(price)
+    //- desc
+    figcaption
+      p.card-text= description
+
+each product in products 
+  +card(
+    product.image, 
+    product.title, 
+    product.price, 
+    product.hasOldPrice, 
+    product.oldPrice, 
+    product.description,
+    product.isHorizontal,
+  )
+

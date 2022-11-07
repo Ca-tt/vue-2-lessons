@@ -1,0 +1,13 @@
+//- configuration
+- let darkThemeClasses = ['dark-theme', 'dark-text', 'dark-bg'];
+
+- let darkObject = { mode: false };
+
+//- configuration end
+
+p(class=darkThemeClasses) dark p
+p(class=darkThemeClasses[0]) dark p
+p(class=darkThemeClasses[darkThemeClasses.length - 1]) dark p
+
+div= darkObject.mode
+div(class=darkObject.mode ? darkThemeClasses : 'light') Conditional class rendering

@@ -1,0 +1,68 @@
+/*! mobile */
+@media screen and (max-width: 768px) {
+
+    .nav-menu,
+    .edit-page {
+        width: 40%;
+    }
+
+    .nav-menu p {
+        font-size: 25px;
+    }
+
+    .nav-menu i {
+        font-size: 40px;
+    }
+
+    .nav-item {
+        height: 20%;
+    }
+
+    .cards-title h2 {
+        font-size: 30px;
+    }
+
+    .card-title p {
+        font-size: 30px;
+    }
+
+    .about-card,
+    .review-card,
+    .donate-card {
+        width: 70%;
+        height: 270px;
+        margin: 1rem;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+
+    .nav-menu,
+    .edit-page {
+        width: 30%;
+    }
+
+    .nav-item {
+        height: 30%;
+        padding: 15px;
+    }
+
+    .nav-item p {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .nav-item i {
+        font-size: 45px;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1080px) {
+
+    .nav-menu,
+    .edit-page {
+        width: 25%;
+    }
+}

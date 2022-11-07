@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <section class="calculator">
+        <form class="form" name="form"><input class="input" type="text" name="input" readonly>
+            <div onclick="form.input.value+='7' ">7</div>
+            <div onclick="form.input.value+='8' ">8</div>
+            <div onclick="form.input.value+='9' ">9</div>
+            <div onclick="form.input.value+='+' ">+</div>
+            <div onclick="form.input.value+='4' ">4</div>
+            <div onclick="form.input.value+='5' ">5</div>
+            <div onclick="form.input.value+='6' ">6</div>
+            <div onclick="form.input.value+='-' ">-</div>
+            <div onclick="form.input.value+='1' ">1</div>
+            <div onclick="form.input.value+='2' ">2</div>
+            <div onclick="form.input.value+='3' ">3</div>
+            <div onclick="form.input.value+='*' ">*</div>
+            <div onclick="form.input.value+='0' ">0</div>
+            <div onclick="form.input.value+='.' ">.</div>
+            <div onclick="form.input.value='' ">C</div>
+            <div onclick="form.input.value+='/' ">/</div>
+            <div id="bracket" onclick="form.input.value+='(' ">(</div>
+            <div id="bracket" onclick="form.input.value+=')' ">)</div>
+            <div id="sum" onclick="form.input.value=eval(form.input.value) ">=</div>
+        </form>
+    </section>
+</body>
+
+</html>

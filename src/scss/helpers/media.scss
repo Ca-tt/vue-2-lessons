@@ -1,0 +1,38 @@
+@import './../variables/media';
+
+// mixin for creating other mixins (c.)
+@mixin media($resolution) {
+  @media screen and (min-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @include media($mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media($tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include media($laptop) {
+    @content;
+  }
+}
+
+@mixin hd {
+  @include media($hd) {
+    @content;
+  }
+}
+
+@mixin fullhd {
+  @include media($fullhd) {
+    @content;
+  }
+}

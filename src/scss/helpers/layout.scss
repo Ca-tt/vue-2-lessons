@@ -1,0 +1,13 @@
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+@each $size in $sizes {
+  .is-#{$size} {
+    max-width: calc(100% / #{$size});
+  }
+}
+
+
+body {
+  // content: "#{$sizes}";
+  // @extend .is-3;
+}
